@@ -1,0 +1,83 @@
+/* 
+css rules - durem
+
+selector {
+    property: value;
+    property1: value1;
+}
+
+tagName, className, idName
+ */
+
+ /* jflsdjkl */
+
+
+/* .garchig {
+    color: #ff00aa;
+    font-size: 100px;
+    text-align: center;
+    background-color: black;
+    border: 3px solid greenyellow;
+    border-radius: 60px;
+}
+
+.first {
+    background-color: red;
+    color: white;
+} */
+
+/* .first {
+    background-color: greenyellow;
+} */
+
+/* 1rem = 16px */
+
+
+/* div, header, section */
+/* Margin, padding, devtools */
+
+/* Margin, Padding */
+
+/* Margin - ergen toirondoo hooson zai uusgeh */
+
+/* .first {
+    width: max-content;
+    border: 2px solid #000;
+    padding: 1rem 2rem 3rem 4rem;
+    margin: 1rem;
+    display: inline-block;
+} */
+/* Flex box */
+
+.wrap {
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.block {
+    width: 50%;
+    height: 350px;
+    border: 2px solid #000;
+}
+
+.block:last-child {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.box {
+    width: 100%;
+    border: 2px solid #000;
+    height: 50%;
+}
+
+.big {
+    width: 100%;
+    height: 300px;
+    border: 2px solid #000;
+}
