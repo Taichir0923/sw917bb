@@ -1,160 +1,125 @@
-/* * {
+* {
     margin: 0;
     padding: 0;
-} */
-/* 
-.container {
-    width: 100%;
-    height: 100vh;
-    background-color: yellow;
 }
- */
 
- /* Layers, Postition */
-
- /* 
- 1. relative
- 2. absolute - width, height, bairlal
- 3. fixed
- */
-
- /* .red {
-     width: 500px;
-     height: 500px;
-     background-color: red;
-     position: relative
- }
-
-.red .yellow {
-    width: 250px;
-    height: 250px;
-    background-color: yellow;
-    position: absolute;
-    left: 20px;
-    top: 0;
- } */
-
- /* .box {
+.wrap
+ {
      width: 300px;
-     height: 200px;
-     border: 2px solid #000;
-     position: relative;
-     overflow: hidden;
-     display: inline-block;
- }
-
- .box img {
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
-     transition: .3s;
- }
-
- .box .caption {
-     position: absolute;
-     background-color: rgba(0,0,0, .6);
-     color: white;
-     bottom: 10px;
-     left: 10px;
-     right: 10px;
-     top: 10px;
-     text-align: center;
-     padding: 1rem 0;
-     /* opacity: 0; *//*
-     transform: scaleY(0);
-     transition: .3s;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     border-radius: 10px;
- }
-
- .box:hover .caption {
-    transform: scaleY(1);
- }
-
- .box:hover img {
-    transform: scale(1.2);
- }
-
- .box .caption i:hover {
-     color: aqua;
- } */
-
- /* Grid Box */
- * {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
- }
-
- .wrap {
-     width: 100%;
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: 100px repeat(4, 200px);
-     gap: 1rem;
+     height: 300px;
+     margin: 2rem;
+     perspective: 800px;
  }
 
 .box {
-    background-color: orangered;
-}
-.wrap .box:nth-child(1) {
-    grid-column: 1/-1;
-    grid-row: 1/2
-}
-
-.wrap .box:nth-child(2){
-    grid-column: 1/3;
-    grid-row: 2/4
-}
-
-.wrap .box:nth-child(3){
-    grid-row: 4/6;
-    grid-column: 1/2;
-}
-
-.wrap .box:nth-child(4){
-    grid-row: 4/5;
-    grid-column: 2/-1;
-}   
-
-.wrap1 {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 150px);
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.wrap1 .box:nth-child(1){
-    grid-row: 2/-1;
-    grid-column: 1/3;
-}
-
-
-.cover {
     width: 300px;
     height: 300px;
-    background-image: conic-gradient(red 0% 60%, white 60% 100%);
-    border: 1px solid #000;
-    margin: 3rem;
-    border-radius: 50%;
+    /* transform: rotateY(30deg); */
+    /* border-radius: 50%; */
+    background-color: #000;
     position: relative;
+    transition: 1s;
+    /* ner, hugatsaa, torol, davtamj */
 }
 
-.cover .center {
+.box .board {
     position: absolute;
-    top: 35px;
-    left: 35px;
-    bottom: 35px;
-    right: 35px;
-    background: white;
-    border: 1px solid #000;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
     border-radius: 50%;
+    transform: rotate(-9deg);
+    border: 1px solid #fff;
+    background-image: conic-gradient(
+        black 0% 5%, 
+        white 5% 10%,
+        black 10% 15%, 
+        white 15% 20%,
+        black 20% 25%, 
+        white 25% 30%,
+        black 30% 35%, 
+        white 35% 40%,
+        black 40% 45%, 
+        white 45% 50%,
+        black 50% 55%, 
+        white 55% 60%,
+        black 60% 65%, 
+        white 65% 70%,
+        black 70% 75%, 
+        white 75% 80%,
+        black 80% 85%, 
+        white 85% 90%,
+        black 90% 95%, 
+        white 95% 100%
+    );
+}
+
+.board.inner {
+    transform: rotate(-18deg);
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: repeating-linear-gradient(249deg, transparent 0px, transparent 3px,rgb(255,255,255) 3px, rgb(255,255,255) 32px),repeating-linear-gradient(307deg, transparent 0px, transparent 3px,rgb(255,255,255) 3px, rgb(255,255,255) 32px),linear-gradient(90deg, hsl(191,85%,78%),hsl(242.429,85%,78%),hsl(293.857,85%,78%),hsl(345.286,85%,78%),hsl(36.714,85%,78%),hsl(88.143,85%,78%),hsl(139.571,85%,78%));
+}
+
+.board.number {
+    transform: rotate(-18deg);
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+}
+
+.board.inner .bulls {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+}
+
+
+.board.inner .bulls__eye {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+
+.wrap:hover .box {
+    animation: ergelt 1.5s linear infinite;
+}
+/* Gradient */
+
+/* UX, UI */
+/* 
+   UX - User Experience
+   UI - User Interface
+
+   Animation
+*/
+
+@keyframes ergelt {
+    0% {
+        transform: rotateY(0);
+        background-color: black;
+    }
+
+    50% {
+        transform: rotateY(180deg);
+        background-color: yellow;
+    }
+
+    100% {
+        transform: rotateY(360deg);
+        background-color: black;
+    }
 }
