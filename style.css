@@ -1,125 +1,128 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.wrap
- {
-     width: 300px;
-     height: 300px;
-     margin: 2rem;
-     perspective: 800px;
- }
-
-.box {
-    width: 300px;
-    height: 300px;
-    /* transform: rotateY(30deg); */
-    /* border-radius: 50%; */
-    background-color: #000;
-    position: relative;
-    transition: 1s;
-    /* ner, hugatsaa, torol, davtamj */
+.container {
+    max-width: 1200px;
+    margin: auto;
 }
 
-.box .board {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    right: 15px;
-    bottom: 15px;
-    border-radius: 50%;
-    transform: rotate(-9deg);
-    border: 1px solid #fff;
-    background-image: conic-gradient(
-        black 0% 5%, 
-        white 5% 10%,
-        black 10% 15%, 
-        white 15% 20%,
-        black 20% 25%, 
-        white 25% 30%,
-        black 30% 35%, 
-        white 35% 40%,
-        black 40% 45%, 
-        white 45% 50%,
-        black 50% 55%, 
-        white 55% 60%,
-        black 60% 65%, 
-        white 65% 70%,
-        black 70% 75%, 
-        white 75% 80%,
-        black 80% 85%, 
-        white 85% 90%,
-        black 90% 95%, 
-        white 95% 100%
-    );
+.header {
+    background-image: url(http://inspection.gov.mn/new/wp-content/uploads/2020/02/header_img.jpg);
+    background-size: 100%;
 }
 
-.board.inner {
-    transform: rotate(-18deg);
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
+.header-top {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1rem 0;
+    position: relative;
 }
 
-.board.number {
-    transform: rotate(-18deg);
-    top: 40px;
-    left: 40px;
-    right: 40px;
-    bottom: 40px;
+.header img {
+    width: 50%;
 }
 
-.board.inner .bulls {
+.header .toggle {
+    position: absolute;
+    left: 1rem;
     width: 30px;
     height: 30px;
-    background-color: black;
-    border-radius: 50%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #fff;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
 }
 
-
-.board.inner .bulls__eye {
-    width: 10px;
-    height: 10px;
-    background-color: white;
-    border-radius: 50%;
+.header .toggle span {
+    height: 2px;
+    background-color: black;
 }
 
-
-.wrap:hover .box {
-    animation: ergelt 1.5s linear infinite;
+.header .toggle span:nth-child(2){
+    width: 50%;
 }
-/* Gradient */
+.header .toggle span:nth-child(3){
+    width: 75%;
+}
+/* https://cdnjs.com/libraries/font-awesome */
 
-/* UX, UI */
-/* 
-   UX - User Experience
-   UI - User Interface
+.header .navigation {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    display: none;
+}
 
-   Animation
-*/
+.header .navigation ul.navBar {
+    display: flex;
+    list-style: none;
+}
 
-@keyframes ergelt {
-    0% {
-        transform: rotateY(0);
-        background-color: black;
+.header .navigation ul.navBar li.option {
+    padding: 1rem;
+    font-weight: bold;
+    transition: .3s;
+    position: relative;
+}
+
+.header .navigation ul.navBar li.option .dropdown {
+    position: absolute;
+    width: max-content;
+    list-style: none;
+    left: 0;
+    top: 100%;
+    transition: .3s;
+    display: none;
+}
+
+.header .navigation ul.navBar li.option .dropdown li {
+    padding: 1rem;
+    color: rgb(48, 47, 47);
+    font-weight: normal;
+    transition: .3s;
+}
+
+.header .navigation ul.navBar li.option .dropdown li:hover {
+    background-color: #0066bf;
+    color: white;
+    cursor: pointer;
+}
+
+.header .navigation ul.navBar li.option:hover {
+    background-color: #0066bf;
+    cursor: pointer;
+}
+
+.header .navigation ul.navBar li.option:hover .dropdown {
+    display: block;
+}
+
+@media (min-width: 768px){
+    .header-top {
+        justify-content: space-between;
+    }
+    .container {
+        width: 85%;
+    }
+    .header .navigation{
+        display: block;
+    }
+    .header img {
+        width: 220px;
     }
 
-    50% {
-        transform: rotateY(180deg);
-        background-color: yellow;
+    .header .toggle {
+        display: none;
     }
+}
 
-    100% {
-        transform: rotateY(360deg);
-        background-color: black;
+@media (min-width: 1024px){
+    .header img {
+        width: 290px;
     }
 }
