@@ -78,6 +78,7 @@
     top: 100%;
     transition: .3s;
     display: none;
+    background-color: white;
 }
 
 .header .navigation ul.navBar li.option .dropdown li {
@@ -102,6 +103,30 @@
     display: block;
 }
 
+.main {
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.main .wrap {
+    display: flex;
+    gap: 1rem;
+}
+
+.main .wrap .left {
+    width: 95%;
+    height: 300px;
+    margin: 0 auto;
+    background-color: black;
+}
+
+.main .wrap .right {
+    width: 25%;
+    display: none;
+    height: 500px;
+    background-color: red;
+}
+
 @media (min-width: 768px){
     .header-top {
         justify-content: space-between;
@@ -119,6 +144,10 @@
     .header .toggle {
         display: none;
     }
+
+    .main .wrap .right  {
+        display: block;
+    }
 }
 
 @media (min-width: 1024px){
@@ -126,3 +155,5 @@
         width: 290px;
     }
 }
+
+/* https://github.com/Taichir0923/sw917bb */
