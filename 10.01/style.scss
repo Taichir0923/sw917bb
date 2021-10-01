@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$palette: #353b48;
+
+.header {
+    width: 100%;
+    background-color: $palette;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo {
+        padding-left: 1rem;
+    }
+    
+    .menu {
+        &__mobile {
+            padding: 1rem;
+            font-size: 20px;
+        }
+
+        &__desktop {
+            display: none;
+            list-style: none;
+            li {
+                padding: 1rem 2rem;
+                transition: .3s;
+                &:hover {
+                    background-color: white;
+                    color: $palette;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        @media (min-width: 768px){
+            &__desktop {
+                display: flex;
+            }
+            &__mobile {
+                display: none;
+            }
+        }
+    }
+}
+
+
+
+
+// BEM - Block Element Modify
+
+// __ child
+// -- modify

@@ -1,0 +1,49 @@
+/* 
+    MNFANSUBs
+    ikon.mn
+    inspection.gov.mn
+*/
+
+/* 
+    SASS
+    JS
+    TailwindCSs
+*/
+
+/* 
+Flex, Grid */
+/* 
+.wrap {
+    display: flex;
+    width: 100%; 
+    gap: 2.5rem;
+    height: 100vh; 
+}
+
+.wrap .box {
+    background-color: brown;
+    margin: auto 0;
+}
+
+.wrap .box:nth-child(1) {
+    width: 25%;
+    height: 300px;
+    
+}
+
+.wrap .box:nth-child(2) {
+    width: 25%;
+    align-self: stretch;
+}
+
+.wrap .box:nth-child(3) {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+.wrap .box:nth-child(4) {
+    height: 200px;
+    align-self: flex-end;
+    flex-grow: 1;
+} */
