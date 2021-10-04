@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Alice&family=Playfair+Display+SC:ital@0;1&family=Sacramento&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Alice", serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display SC", serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-family: "Sacramento", cursive;
+}
+
+.shopTitle {
+  font-family: "Playfair Display SC", serif;
+  font-size: 12px;
+  letter-spacing: .5em;
+}
+
+::-moz-selection {
+  background-color: orangered;
+}
+
+::selection {
+  background-color: orangered;
+}
+
+.header {
+  width: 100%;
+  position: relative;
+}
+
+.header__mobile {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: .75rem;
+  padding: 10px;
+}
+
+.header__mobile img {
+  width: 55px;
+}
+
+.header__desktop {
+  position: absolute;
+  color: #fff;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__desktop .navItems {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.header__desktop .navItems p {
+  padding: .75rem 2rem;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.header__desktop .navItems:hover p {
+  color: #c7d93b;
+  cursor: pointer;
+}
+
+.header__desktop .navLogo {
+  padding: 1rem 2.5rem;
+}
+
+.header__desktop .navLogo img {
+  width: 100px;
+  margin-bottom: .5rem;
+}
+
+.header__desktop .navLogo .shopTitle {
+  font-size: 10px;
+  text-align: center;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.header__desktop .navLogo:hover .shopTitle {
+  color: #c7d93b;
+  cursor: pointer;
+}
+
+.header__hero {
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://cdn.shopify.com/s/files/1/0261/4687/t/7/assets/img_homepage_slider1.jpg?v=839847293968337857);
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__hero .caption {
+  text-align: center;
+  color: #fff;
+}
+
+.header__hero .caption h1 {
+  font-size: 36px;
+  font-weight: normal;
+  font-style: italic;
+  padding: 21px 36px;
+  border-bottom: 1px solid #fff;
+}
+
+.header__hero .caption a {
+  font-size: 54px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.header__hero .caption a:hover {
+  color: #c7d93b;
+  cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  .header__mobile {
+    display: none;
+  }
+  .header__hero {
+    background-position-y: top;
+  }
+}
+/*# sourceMappingURL=style.css.map */

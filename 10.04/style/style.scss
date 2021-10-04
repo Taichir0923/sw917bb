@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Playfair+Display+SC:ital@0;1&family=Sacramento&display=swap');
+
+$playfair: 'Playfair Display SC', serif;
+$alice: 'Alice', serif;
+$sacramento: 'Sacramento', cursive;
+$hover: #c7d93b;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+body {
+    font-family: $alice;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $playfair;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: $sacramento;
+}
+
+.shopTitle {
+    font-family: $playfair;
+    font-size: 12px;
+    letter-spacing: .5em;
+}
+
+::selection {
+    background-color: orangered;
+}
+
+.header {
+    width: 100%;
+    position: relative;
+    &__mobile {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: .75rem;
+        padding: 10px;
+        img {
+            width: 55px;
+        }
+
+        
+    }
+
+    &__desktop {
+        position: absolute;
+        color: #fff;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        .navItems {
+            border-bottom: 1px solid rgba(255,255,255,.3);
+            p {
+                padding: .75rem 2rem;
+                transition: .3s;
+            }
+            &:hover {
+                p {
+                    color: $hover;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .navLogo {
+            padding: 1rem 2.5rem;
+            img {
+                width: 100px;
+                margin-bottom: .5rem;
+            }
+
+            .shopTitle {
+                font-size: 10px;
+                text-align: center;
+                transition: .3s;
+            }
+            &:hover {
+                .shopTitle {
+                    color: $hover;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    &__hero {
+        width: 100%;
+        height: 100vh;
+        background-image: url(https://cdn.shopify.com/s/files/1/0261/4687/t/7/assets/img_homepage_slider1.jpg?v=839847293968337857);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .caption {
+            text-align: center;
+            color: #fff;
+            h1 {
+                font-size: 36px;
+                font-weight: normal;
+                font-style: italic;
+                padding: 21px 36px;
+                border-bottom: 1px solid #fff;
+            }
+
+            a {
+                font-size: 54px;
+                transition: .4s;
+                &:hover {
+                    color: $hover;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+
+    @media(min-width: 1024px){
+        &__mobile {
+            display: none;
+        }
+
+        &__hero {
+            background-position-y: top;
+        }
+    }
+}
