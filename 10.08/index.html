@@ -1,15 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+      integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js" integrity="sha512-Kr+RPfLjQ71E0cJ9nseJ6jwTrnmMnuSPnnsVQQ/ZYYCjOHKfJcWj8ILICXnvf9A7ZQChNzIbr9x/ZAxA6xAZlQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <body>
     <div class="container">
-        <div class="circle"></div>
+      <div class="circle"></div>
+
+      <div class="wrap">
+        <div class="box"></div>
+      </div>
     </div>
-</body>
+    <section class="scroll"></section>
+
+    <script>
+      anime({
+        targets: ".wrap .box",
+        translateX: {
+          value: 250,
+          duration: 800,
+        },
+        rotate: {
+          value: 360,
+          duration: 1800,
+          easing: "easeInOutSine",
+        },
+        scale: {
+          value: 2,
+          duration: 1600,
+          delay: 800,
+          easing: "easeInOutQuart",
+        },
+        delay: 250,
+      });
+
+      // background-color => backgroundColor
+      ScrollReveal().reveal('.scroll', {
+          distance: '200px',
+          origin: 'left',
+          duration: 1000,
+          delay: 250
+      })
+    </script>
+  </body>
 </html>

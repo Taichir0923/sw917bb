@@ -16,12 +16,17 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 1.5rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .container .circle {
@@ -30,31 +35,72 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 50%;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  overflow: hidden;
 }
 
 .container .circle::before {
   content: '';
   width: 50% !important;
   height: 300px !important;
-  background-color: red;
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 25%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF10F0), color-stop(40%, #04d9ff));
+  background-image: linear-gradient(#FF10F0 0% 40%, #04d9ff 40% 100%);
   -webkit-transition: .6s;
   transition: .6s;
+  -webkit-animation: ergeh 1.5s linear infinite;
+          animation: ergeh 1.5s linear infinite;
 }
 
-.container .circle:hover::before {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+.container .circle::after {
+  content: '';
+  background-color: #30336b;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 50%;
+}
+
+.container .wrap {
+  width: 50%;
+  position: relative;
+}
+
+.container .wrap .box {
+  position: absolute;
+  width: 50px;
+  left: 0;
+  height: 50px;
+  background-color: yellow;
+}
+
+.scroll {
+  width: 100%;
+  height: 100vh;
+  background-color: yellow;
+}
+
+@-webkit-keyframes ergeh {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes ergeh {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -13,32 +13,65 @@ body {
     width: 100%;
     height: 100vh;
     display: flex;
+    gap: 1.5rem;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     .circle {
         width: 250px;
         height: 250px;
         background-color: rgba(0,0,0,.4);
         border-radius: 50%;
         position: relative;
-        display: flex;
-    justify-content: center;
-    align-items: center;
+        overflow: hidden;
         &::before {
             content: '';
             width: 50% !important;
             height: 300px !important;
-            background-color: red;
             position: absolute;
-            left: 50%;
-            top: 50%;
+            left: 25%;
+            background-image: linear-gradient(#FF10F0 0% 40%, #04d9ff 40% 100%);
             // transform: translate(-50%, -50%);
             transition: .6s;
+            animation: ergeh 1.5s linear infinite;
         }
-        &:hover {
-            &::before {
-                transform: rotate(360deg)
-            }
+
+        &::after {
+            content: '';
+            background-color: #30336b;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border-radius: 50%;
         }
+        
+    }
+    .wrap {
+        width: 50%;
+        position: relative;
+        .box {
+            position: absolute;
+            width: 50px;
+            left: 0;
+            height: 50px;
+            background-color: yellow;
+        }
+    }
+}
+
+.scroll {
+    width: 100%;
+    height: 100vh;
+    background-color: yellow;
+}
+
+@keyframes ergeh {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
     }
 }
