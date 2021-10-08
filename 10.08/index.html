@@ -22,9 +22,17 @@
         <div class="box"></div>
       </div>
     </div>
-    <section class="scroll"></section>
+    <section class="scroll">
+        <input class="input" onclick="check()" type="radio">
+    </section>
 
     <script>
+        const input = document.querySelector('.input')
+        let checked = false;
+        function check (){
+            checked = !checked
+            input.checked = checked;
+        }
       anime({
         targets: ".wrap .box",
         translateX: {
