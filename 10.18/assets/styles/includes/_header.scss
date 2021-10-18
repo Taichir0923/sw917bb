@@ -1,0 +1,14 @@
+.header {
+    width: 100%;
+    background-color: orangered;
+    color: white;
+    font-size: 20px;
+    @include flex(row, space-between, center, 0);
+    img {
+        margin-left: 1rem;
+        width: 150px;
+    }
+    .menu__mobile {
+        padding: 1rem;
+    }
+}

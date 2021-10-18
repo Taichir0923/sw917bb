@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 95%;
+  margin: auto;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1150px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  background-color: orangered;
+  color: white;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0;
+}
+
+.header img {
+  margin-left: 1rem;
+  width: 150px;
+}
+
+.header .menu__mobile {
+  padding: 1rem;
+}
+
+.mobile_nav {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 100%;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  background-color: black;
+}
+
+.mobile_nav .nav_header {
+  text-align: right;
+  color: white;
+  font-size: 20px;
+}
+
+.mobile_nav .nav_header i {
+  padding: 1rem;
+}
+
+.open {
+  left: 0 !important;
+}
+/*# sourceMappingURL=styles.css.map */

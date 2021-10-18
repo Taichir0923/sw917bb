@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 14px;
+    overflow-x: hidden;
+    // font-family: ;
+}
+
+.container {
+    width: 95%;
+    margin: auto;
+    @media (min-width: 1200px) {
+        width: 1150px;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    width: 100%;
+}
