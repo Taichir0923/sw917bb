@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.header {
+  width: 100%;
+  padding: 1rem;
+  background-color: orangered;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.header img {
+  width: 200px;
+}
+
+.header .menu {
+  position: fixed;
+  right: 1rem;
+  top: .5rem;
+  z-index: 100;
+}
+
+.header .menu .toggle-btn .icon {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  z-index: 30;
+}
+
+.header .menu .toggle-btn .icon .line {
+  width: 45%;
+  height: 3px;
+  background-color: #333;
+  position: relative;
+}
+
+.header .menu .toggle-btn .icon .line::before, .header .menu .toggle-btn .icon .line::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  left: 0;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.header .menu .toggle-btn .icon .line::before {
+  top: -7px;
+}
+
+.header .menu .toggle-btn .icon .line::after {
+  bottom: -7px;
+}
+
+.header .menu .toggle:checked + .toggle-btn .icon .line {
+  background-color: transparent;
+}
+
+.header .menu .toggle:checked + .toggle-btn .icon .line::before {
+  -webkit-transform: rotate(315deg);
+          transform: rotate(315deg);
+  top: 0;
+}
+
+.header .menu .toggle:checked + .toggle-btn .icon .line::after {
+  -webkit-transform: rotate(-315deg);
+          transform: rotate(-315deg);
+  bottom: 0;
+}
+
+.header .menu .bg {
+  position: fixed;
+  right: 1rem;
+  top: .5rem;
+  width: 50px;
+  height: 50px;
+  z-index: 15;
+  background-color: violet;
+  border-radius: 50%;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.header .menu .toggle:checked ~ .bg {
+  -webkit-transform: scale(100);
+          transform: scale(100);
+}
+
+.header .menu .navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 16;
+  color: white;
+  font-weight: bold;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-transition-delay: .2s;
+          transition-delay: .2s;
+}
+
+.header .menu .navigation ul {
+  list-style: none;
+}
+
+.header .menu .navigation ul li {
+  width: 300px;
+  padding: 1rem;
+  text-align: center;
+  margin: 10px;
+}
+
+.header .menu .navigation ul li:hover {
+  background-color: white;
+  color: violet;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.header .menu .toggle:checked ~ .navigation {
+  opacity: 1;
+  visibility: visible;
+}
+
+#last:target {
+  background-color: violet !important;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
